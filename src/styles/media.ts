@@ -1,4 +1,4 @@
-import keysOf from 'utils/keyOf'
+import keysOf from 'utils/keyOf';
 
 const sizes = {
   mobile: 689.98,

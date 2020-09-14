@@ -1,10 +1,10 @@
 export default {
   fonts: {
-    inter: "Inter",
+    inter: 'Inter',
   },
   colors: {
-    white: "#ffffff",
-    bluewood: "#2B3253",
+    white: '#ffffff',
+    bluewood: '#2B3253',
   },
   weights: {
     regular: 400,

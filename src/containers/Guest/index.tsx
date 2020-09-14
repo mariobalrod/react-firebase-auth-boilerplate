@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Guest = () => {
-    return (
-        <div>
-            GUEST
-        </div>
-    )
-}
+  return <div>GUEST</div>;
+};
 
-export default Guest
+export default Guest;

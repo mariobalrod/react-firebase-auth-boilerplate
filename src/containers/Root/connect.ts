@@ -1,12 +1,12 @@
-import useAuth from 'hooks/useAuth'
+import useAuth from 'hooks/useAuth';
 
 const useConnect = () => {
-  const { loading, currentUser } = useAuth()
+  const { loading, currentUser } = useAuth();
 
   return {
     loading,
-    currentUser
-  }
-}
+    currentUser,
+  };
+};
 
-export default useConnect
+export default useConnect;
