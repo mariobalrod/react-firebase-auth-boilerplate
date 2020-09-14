@@ -1,74 +1,69 @@
 {
-    "plugins": ["prettier", "@typescript-eslint"],
-    "extends": ["airbnb-typescript", "react-app", "prettier"],
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+    },
     "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "react-hooks", "prettier"],
+    "extends": [
+      "airbnb-typescript",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "prettier/react",
+    ],
     "parserOptions": {
-      "project": "./tsconfig.json"
+      "project": "./tsconfig.json",
     },
     "settings": {
       "import/resolver": {
-        "typescript": {
-          "alwaysTryTypes": true
-        }
-      }
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx",
+            "d.ts",
+            "spec.ts",
+            "spec.tsx",
+          ],
+        },
+        "babel-module": {},
+        "typescript": {},
+      },
+      "import/extensions": [
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx",
+        "spec.ts",
+        "spec.tsx",
+        "d.ts",
+      ],
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts",
+          ".tsx",
+          "spec.ts",
+          "spec.tsx",
+          "d.ts",
+        ],
+      },
+      "react": {
+        "version": "detect",
+      },
     },
     "rules": {
-      "object-curly-spacing": ["warn", "always"],
-      "no-unused-vars": [
-        "warn",
-        {
-          "vars": "all",
-          "args": "none"
-        }
-      ],
-      "@typescript-eslint/no-unused-vars": [
-        "warn",
-        {
-          "vars": "all",
-          "args": "none"
-        }
-      ],
-      "@typescript-eslint/no-explicit-any": [
-        "error",
-        {
-          "ignoreRestArgs": true
-        }
-      ],
-      "max-len": [
-        "warn",
-        {
-          "code": 80,
-          "ignoreStrings": true,
-          "ignoreTemplateLiterals": true,
-          "ignoreComments": true
-        }
-      ],
-      "no-plusplus": [
-        "error",
-        {
-          "allowForLoopAfterthoughts": true
-        }
-      ],
-      "react/jsx-key": "error",
+      "react/jsx-props-no-spreading": 0,
+      "react/prop-types": 0,
+      "react/no-danger": 0,
+      "prettier/prettier": "error",
       "import/no-extraneous-dependencies": [
         "error",
         {
-          "devDependencies": [
-            "**/*.test.js",
-            "**/*.test.jsx",
-            "**/*.test.ts",
-            "**/*.test.tsx",
-            "src/tests/**/*"
-          ]
-        }
+          "devDependencies": ["**/stories.*", "**/.storybook/**/*.*"],
+          "peerDependencies": true,
+        },
       ],
-      "react/jsx-props-no-spreading": "off",
-      "import/prefer-default-export": "off",
-      "react/jsx-boolean-value": "off",
-      "react/prop-types": "off",
-      "react/no-unescaped-entities": "off",
-      "react/jsx-one-expression-per-line": "off",
-      "react/jsx-wrap-multilines": "off",
-      "react/destructuring-assignment": "off"
-    }
-}
+    },
+  }
