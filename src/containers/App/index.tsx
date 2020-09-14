@@ -1,9 +1,15 @@
 import React from 'react'
 import Root from 'containers/Root'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyle from 'styles/GlobalStyle'
+import theme from 'styles/themes'
 
 const App = () => {
     return (
-        <Root/>
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Root/>
+        </ThemeProvider>
     )
 }
 
